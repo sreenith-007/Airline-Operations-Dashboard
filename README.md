@@ -131,10 +131,11 @@ Top 10 routes by volume, with on-time % (colour-coded) and average arrival delay
 
 ## 🚀 How to Use
 
-1. Download `flights.csv` from the [Kaggle dataset](https://www.kaggle.com/datasets/usdot/flight-delays) and save it somewhere on your computer.
-2. Open `AirlineOperations.pbix` in Power BI Desktop.
-3. Go to **Home → Transform data**, select the `Flights` query, and edit the file path in the **Source** step.
-4. Click **Close & Apply** to refresh.
+1. Download `Airline.Operations.pbix` from the [Releases page](https://github.com/sreenith-007/Airline-Operations-Dashboard/releases/tag/v1.0).
+2. Open it in Power BI Desktop (free from Microsoft).
+3. To refresh the data, download `flights.csv` from the [Kaggle dataset](https://www.kaggle.com/datasets/usdot/flight-delays) and save it on your computer.
+4. In Power BI, go to **Home → Transform data**, select the `Flights` query, and edit the file path in the **Source** step.
+5. Click **Close & Apply**.
 
 ## 📁 Repository Structure
 
