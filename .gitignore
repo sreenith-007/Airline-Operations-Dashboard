@@ -1,0 +1,11 @@
+# Power BI temp/cache files
+*.pbix.bak
+~$*.pbix
+
+# Raw large dataset: too big for GitHub, download from Kaggle instead
+/data/flights.csv
+/data/flights_sample.csv
+
+# OS files
+.DS_Store
+Thumbs.db

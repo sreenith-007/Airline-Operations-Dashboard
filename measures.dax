@@ -1,0 +1,35 @@
+-- Airline Operations: DAX measures
+-- Compare with the measures in your own .pbix and edit names/logic to match.
+
+Total Flights = COUNTROWS(Flights)
+
+Cancelled Flights = SUM(Flights[CANCELLED])
+
+Diverted Flights = SUM(Flights[DIVERTED])
+
+Completed Flights =
+CALCULATE(COUNTROWS(Flights), Flights[CANCELLED] = 0, Flights[DIVERTED] = 0)
+
+Cancellation Rate = DIVIDE([Cancelled Flights], [Total Flights])
+
+On-Time Flights = SUM(Flights[IsOnTime])
+
+On-Time % = DIVIDE([On-Time Flights], [Completed Flights])
+
+Delayed Flights = [Completed Flights] - [On-Time Flights]
+
+Delay % = DIVIDE([Delayed Flights], [Completed Flights])
+
+Avg Arrival Delay (min) =
+CALCULATE(AVERAGE(Flights[ARRIVAL_DELAY]), Flights[CANCELLED] = 0)
+
+Avg Departure Delay (min) =
+CALCULATE(AVERAGE(Flights[DEPARTURE_DELAY]), Flights[CANCELLED] = 0)
+
+Weather Delay (min) = SUM(Flights[WEATHER_DELAY])
+Airline Delay (min) = SUM(Flights[AIRLINE_DELAY])
+Air System Delay (min) = SUM(Flights[AIR_SYSTEM_DELAY])
+Late Aircraft Delay (min) = SUM(Flights[LATE_AIRCRAFT_DELAY])
+Security Delay (min) = SUM(Flights[SECURITY_DELAY])
+
+Total Distance (miles) = SUM(Flights[DISTANCE])
